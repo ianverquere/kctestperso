@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300');
+
+* {
+    margin: 0;
+  }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    background-color: #200f33;
+    background-size: cover;
+}
+
+/* Header Styles */
+footer {
+    background-color: white;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px 10px 50px;
+}
+
+
+/* Section Styles */
+section{
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+/* Nav Styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+
+/* Title Styles */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+p {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+em {
+    font-style: italic;
+    text-decoration: line-through;
+}
+
+strong {
+    font-weight: bold;
+}
+
+
+/* Text Styles */
+ul, ol, p, li {
+    font-size: 1em;
+    font-family: 'Manrope', sans-serif;
+}
+
+/* Link Styles */
+a {
+    text-decoration: none;
+    font-size: 1em;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+
+}
+
+/* Logo Styles */
+
+.logo-bas img {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.logo-bas img:hover {
+    opacity: 0.5;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+/* Ask Me Styles */
+.cta {
+    display: inline-flex;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background: linear-gradient(#8e86b5, #acaeed);
+    color: white;
+    border-radius: 30px;
+    border: 1px solid rgb(54, 2, 138);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.cta:active{
+    color: blue;
+    border-color: blue;
+}
+
+.cta:hover {
+    text-decoration: underline;
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  * {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+  }
+  
+  a,
+  a:visited,
+  a:hover,
+  a:active {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  h1 {
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    font-size: 3em;
+    text-align: center;
+  }
+  
+  .outer-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    
+    .checkbox-toggle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      cursor: pointer;
+      width: 60px;
+      height: 60px;
+      opacity: 0;
+      
+      &:checked {
+        & + .hamburger {
+          > div {
+            transform: rotate(135deg);
+            
+            &:before,
+            &:after {
+              top: 0;
+              transform: rotate(90deg);
+            }
+            
+            &:after {
+              opacity: 0;
+            }
+          }
+        }
+        
+        & ~ .menu  {
+          pointer-events: auto;
+          visibility: visible;
+          
+          > div {
+            transform: scale(1);
+            transition-duration: .75s;
+            
+            > div {
+              opacity: 1;
+              transition: opacity .4s ease .4s;
+            }
+          }
+        }
+      }
+      
+      &:hover + .hamburger {
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, .1);
+      }
+      
+      &:checked:hover + .hamburger > div {
+        transform: rotate(225deg);
+      }
+    }
+    
+    .hamburger {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 60px;
+      height: 60px;
+      padding: .5em 1em;
+      background: #200f33;
+      border-radius: 0 .12em .12em 0;
+      cursor: pointer;
+      transition: box-shadow .4s ease;
+      backface-visibility: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      > div {
+        position: relative;
+        flex: none;
+        width: 100%;
+        height: 2px;
+        background: white;
+        transition: all .4s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          z-index: 1;
+          top: -60px / 6;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: inherit;
+          transition: all .4s ease;
+        }
+        
+        &:after {
+          top: 60px / 6;
+        }
+      }
+    }
+    
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      visibility: hidden;
+      overflow: hidden;
+      backface-visibility: hidden;
+      outline: 1px solid transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      > div {
+        width: 200vw;
+        height: 200vw;
+        color: white;
+        background: #200f33;
+        border-radius: 50%;
+        transition: all .4s ease;
+        flex: none;
+        transform: scale(0);
+        backface-visibility: hidden;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        > div {
+          text-align: center;
+          max-width: 90vw;
+          max-height: 100vh;
+          opacity: 0;
+          transition: opacity .4s ease;
+          overflow-y: auto;
+          flex: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          
+          > ul {
+            list-style: none;
+            padding: 0 1em;
+            margin: 0;
+            display: block;
+            max-height: 100vh;
+            
+            > li {
+              padding: 0;
+              margin: 1em;
+              font-size: 24px;
+              display: block;
+              
+              > a {
+                position: relative;
+                display: inline;
+                cursor: pointer;
+                transition: color .4s ease;
+                
+                &:hover {
+                  color: darken(#200f33,97%);
+                  
+                  &:after {
+                    width: 100%;
+                  }
+                }
+                
+                &:after {
+                  content: '';
+                  position: absolute;
+                  z-index: 1;
+                  bottom: -.15em;
+                  left: 0;
+                  width: 0;
+                  height: 2px;
+                  background: #FEFEFE;
+                  transition: width .4x ease;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }

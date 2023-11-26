@@ -1,0 +1,153 @@
+/* A propos Style */
+
+.a-propos-main section{
+    width: 50%;
+    margin: auto;
+}
+
+
+.carre-contenu{
+    padding: 50px;
+    color: white;
+    text-align: center;
+}
+
+.carre-contenu h1{
+    margin-bottom: 75px;
+    font-size: 65px;
+}
+
+.carre-contenu h2{
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.carre-contenu h3{
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.carre-contenu p{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.carre-contenu ul{
+    list-style-position: inside;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.carre-contenu li{
+    color: white;
+    text-align: left;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+
+.redirect-button {
+    color: white;
+}
+
+.competence{
+    background-color: white;
+    background-size: cover;
+    font-family: "Space Mono", monospace;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    padding: 32px;
+    margin: 60px auto;
+    border: 1px solid #eee;
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+
+.competence *{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizelegibility;
+    letter-spacing: -0.25px;
+}
+
+.competence ol {
+    padding-left: 50px;
+  }
+  
+.competence li {
+    color: #4F4F4F;
+    padding-left: 16px;
+    margin-top: 50px;
+    position: relative;
+    font-size: 16px;
+    line-height: 20px;
+}
+.competence li:before {
+    content: "";
+    display: block;
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    position: absolute;
+    top: -12px;
+    left: -35px;
+}
+  
+.competence strong {
+    color: #292929;
+}
+
+.competence p{
+    margin-top: 10px;
+}
+  
+.competence ol.alternating-colors li:nth-child(odd):before {
+    border-color: #0BAD02;
+}
+.competence ol.alternating-colors li:nth-child(even):before {
+    border-color: #2378D5;
+}
+
+
+/* Table Style */
+
+.tableau-voyages{
+    padding-top: 20px;
+}
+
+.tableau-voyages caption{
+    padding-bottom: 20px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.tableau-voyages table{
+    border-collapse: collapse;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.tableau-voyages td, th{
+    border: 1px solid white;
+    color: white;
+    padding: 20px 50px 20px 50px;
+    text-align: center;
+}
+
+.tableau-voyages li{
+    text-align: justify;
+}
+
+@media screen and (max-width: 996px) {
+    .a-propos-main section{
+        width: 75%;
+        margin: auto;
+    }
+    .tableau-voyages {
+        display: none;
+    }
+}

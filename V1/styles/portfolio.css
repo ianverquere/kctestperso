@@ -1,0 +1,80 @@
+/* PORTFOLIO STYLE */
+
+.portfolio-section-photos {
+    background-color: white;
+    padding: 20px;
+}
+
+.titre-portfolio{
+    margin-left: 50px;
+    font-size: 3.5em;
+    font-weight: bold;
+}
+
+.portfolio-section-photos h2 {
+    color: #200f33;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.grid-coree,
+.grid-crpanama,
+.grid-europe{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes par ligne */
+    grid-auto-rows: 300px; /* Hauteur fixe de 300 pixels pour chaque photo */
+    gap: 15px; 
+}
+
+.grid-coree img,
+.grid-crpanama img,
+.grid-europe img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container img {
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.2); /* Augmente la taille de l'image au survol */
+}
+
+
+.photo-hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .photo-hover {
+    display: flex;
+    opacity: 1;
+}
+
+
+@media screen and (max-width: 996px) {
+    .grid-paysages {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  
+    .grid-portraits {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  }
+  
